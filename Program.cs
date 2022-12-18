@@ -7,7 +7,28 @@ using FastestFilteringMethod;
 
 Console.WriteLine("Testing the fastest way to filter from the list");
 
-BenchmarkRunner.Run<ConvertDateToString>();
+//BenchmarkRunner.Run<ConvertDateToString>();
+
+//Array of Random Alphabetical letter char array
+var randomAlphabeticalLetters = new Faker().Random.AlphaNumeric(1000).ToCharArray();
+
+foreach (var c in randomAlphabeticalLetters)
+{
+    Console.Write(c +" ");
+}
+
+// char array of random int numbers with 20 elements
+
+/*
+var randomIntNumbers = new Faker().Random.Int(10,1000).ToString().ToCharArray();
+
+foreach (var c in randomIntNumbers)
+{
+    Console.Write(c +" ");
+}
+*/
+
+Console.ReadLine();
 
 /*var listOfStudents = new Faker<Student>()
     .RuleFor(s => s.Id, f => f.Random.Guid())
